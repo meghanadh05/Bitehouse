@@ -33,4 +33,4 @@ Images 1-28 and 30 were downloaded from Wikimedia Commons and resized/cropped fo
 29. Unsplash photo: `photo-1513558161293-cdaf765ed2fd`
 30. `Glass cola.jpg`
 
-Original Wikimedia file pages can be found by searching the exact titles above at https://commons.wikimedia.org/. The Unsplash source is https://unsplash.com/photos/1513558161293-cdaf765ed2fd.
+Original Wikimedia file pages are available by title at https://commons.wikimedia.org/. The Unsplash source is https://unsplash.com/photos/1513558161293-cdaf765ed2fd.
