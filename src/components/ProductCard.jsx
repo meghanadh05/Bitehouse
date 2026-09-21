@@ -3,9 +3,12 @@ import { useCart } from '../context/CartContext.jsx';
 import { useWishlist } from '../context/WishlistContext.jsx';
 import { hasAnyNotificationForProduct } from '../utils/notifications.js';
 import { formatCurrency } from '../utils/storage.js';
+import fallbackImage from '../assets/food/1-classic-chicken-burger.jpg';
 
-const fallbackImage =
-  'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80';
+const useFallbackImage = (event) => {
+  event.currentTarget.onerror = null;
+  event.currentTarget.src = fallbackImage;
+};
 
 export function getStockLabel(stock) {
   if (stock === 0) return 'Currently unavailable';
@@ -22,7 +25,7 @@ export default function ProductCard({ product, onNotify }) {
   return (
     <article className="product-card">
       <Link to={`/product/${product.id}`} className="product-image-link" aria-label={`View ${product.name}`}>
-        <img src={product.image} alt={product.name} onError={(event) => (event.currentTarget.src = fallbackImage)} />
+        <img src={product.image} alt={product.name} onError={useFallbackImage} />
       </Link>
       <div className="product-card-body">
         <div className="product-meta">

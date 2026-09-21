@@ -10,9 +10,12 @@ import { useWishlist } from '../context/WishlistContext.jsx';
 import { products } from '../data/products.js';
 import { hasAnyNotificationForProduct } from '../utils/notifications.js';
 import { formatCurrency } from '../utils/storage.js';
+import fallbackImage from '../assets/food/1-classic-chicken-burger.jpg';
 
-const fallbackImage =
-  'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80';
+const useFallbackImage = (event) => {
+  event.currentTarget.onerror = null;
+  event.currentTarget.src = fallbackImage;
+};
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -39,7 +42,7 @@ export default function ProductDetails() {
       </Link>
       <section className="details-layout">
         <div className="details-image">
-          <img src={product.image} alt={product.name} onError={(event) => (event.currentTarget.src = fallbackImage)} />
+          <img src={product.image} alt={product.name} onError={useFallbackImage} />
         </div>
         <div className="details-content">
           <div className="detail-labels"><span className={`food-indicator ${product.veg ? 'veg' : 'non-veg'}`}><i /></span><p className="eyebrow">{product.category}</p>{product.bestseller && <span className="bestseller">Bestseller</span>}</div>
