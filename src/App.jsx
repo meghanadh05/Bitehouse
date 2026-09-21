@@ -78,7 +78,7 @@ function FoodCard({ item, onAddToCart }) {
             onClick={() => onAddToCart(item)}
             type="button"
           >
-            {isAvailable ? 'Add to Cart' : 'Unavailable'}
+            Add to Cart
           </button>
         </div>
       </div>
