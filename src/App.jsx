@@ -62,15 +62,23 @@ function CategoryButtons({ selectedCategory, onSelectCategory }) {
 }
 
 function FoodCard({ item, onAddToCart }) {
+  const isAvailable = item.available !== false;
+
   return (
     <article className="food-card">
       <img src={item.image} alt={item.name} />
       <div className="food-card-body">
+        {!isAvailable && <span className="unavailable-label">Unavailable</span>}
         <h3>{item.name}</h3>
         <div className="food-card-footer">
           <strong>₹{item.price}</strong>
-          <button className="button secondary" onClick={() => onAddToCart(item)} type="button">
-            Add to Cart
+          <button
+            className="button secondary"
+            disabled={!isAvailable}
+            onClick={() => onAddToCart(item)}
+            type="button"
+          >
+            {isAvailable ? 'Add to Cart' : 'Unavailable'}
           </button>
         </div>
       </div>
@@ -158,6 +166,8 @@ export default function App() {
   ));
 
   function addToCart(product) {
+    if (product.available === false) return;
+
     setCartItems((items) => {
       const existingItem = items.find((item) => item.id === product.id);
 

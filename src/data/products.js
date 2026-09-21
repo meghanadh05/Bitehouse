@@ -33,7 +33,8 @@ export const products = [
     name: 'Double Cheese Burger',
     category: 'Burgers',
     price: 279,
-    image: doubleCheeseBurger
+    image: doubleCheeseBurger,
+    available: false
   },
   {
     id: 4,
@@ -54,7 +55,8 @@ export const products = [
     name: 'Pepperoni Pizza',
     category: 'Pizza',
     price: 499,
-    image: pepperoniPizza
+    image: pepperoniPizza,
+    available: false
   },
   {
     id: 7,
@@ -82,7 +84,8 @@ export const products = [
     name: 'Mutton Biryani',
     category: 'Biryani',
     price: 429,
-    image: muttonBiryani
+    image: muttonBiryani,
+    available: false
   },
   {
     id: 11,

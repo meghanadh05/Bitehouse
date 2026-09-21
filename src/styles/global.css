@@ -35,6 +35,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -252,6 +257,17 @@ img {
   display: grid;
   gap: 14px;
   padding: 14px;
+}
+
+.unavailable-label {
+  width: max-content;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .food-card h3 {
