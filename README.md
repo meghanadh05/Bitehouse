@@ -1,6 +1,6 @@
 # BiteHouse
 
-BiteHouse is a simple one-page React food menu project. It is built as a clean lab project to demonstrate core React concepts without extra features or backend setup.
+BiteHouse is a simple one-page React food menu project. It is built as a clean leraning project to demonstrate core React concepts.
 
 ## Features
 
@@ -24,18 +24,6 @@ BiteHouse is a simple one-page React food menu project. It is built as a clean l
 - Event handling
 - Conditional rendering
 
-## Not Included
-
-This project intentionally keeps the code simple. It does not use:
-
-- React Router
-- Search
-- Wishlist
-- Checkout
-- Login
-- localStorage
-- Backend or API
-- Payment integration
 
 ## Project Structure
 
