@@ -57,8 +57,19 @@ export default function Navbar() {
 
           <NavLink className="wishlist-link" to="/wishlist" onClick={() => setMenuOpen(false)}>Wishlist</NavLink>
 
+          <div className="contact-actions" aria-label="Contact BiteHouse owner">
+            <a className="contact-link" href="tel:+919492643179" aria-label="Call BiteHouse at 9492643179" title="Call 9492643179">
+              <span className="contact-icon" aria-hidden="true">☎</span>
+              <span className="contact-label">Call</span>
+            </a>
+            <a className="contact-link" href="sms:+919492643179" aria-label="Send an SMS to BiteHouse at 9492643179" title="SMS 9492643179">
+              <span className="contact-icon" aria-hidden="true">✉</span>
+              <span className="contact-label">SMS</span>
+            </a>
+          </div>
+
           <Link className="cart-link" to="/cart" onClick={() => setMenuOpen(false)} aria-label={`Cart with ${itemCount} items`}>
-            Cart <span>{itemCount}</span>
+            <span className="cart-icon" aria-hidden="true">🛒</span> Cart <span className="cart-count">{itemCount}</span>
           </Link>
         </div>
       </nav>

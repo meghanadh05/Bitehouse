@@ -17,7 +17,13 @@ export default function Home() {
           <p className="eyebrow">BiteHouse</p>
           <h1>Good food.<br />Made fresh.</h1>
           <p>Your favourite meals, prepared fresh when you order.</p>
-          <div className="hero-actions"><Link className="button primary" to="/shop">Order Now</Link><Link className="button secondary" to="/shop">View Menu</Link></div>
+          <div className="hero-actions">
+            <Link className="button primary" to="/shop">Order Now</Link>
+            <Link className="button secondary" to="/shop">View Menu</Link>
+            <a className="button secondary contact-outlet-button" href="tel:+919492643179" title="Call BiteHouse outlet at 9492643179">
+              <span aria-hidden="true">☎</span> Contact Outlet
+            </a>
+          </div>
         </div>
         <img
           src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85"
